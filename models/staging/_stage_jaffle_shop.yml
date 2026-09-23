@@ -10,6 +10,7 @@ models:
     description : One order per row
     columns:
       - name: order_id
+        description: Primary key for the order table
         data_tests:
           - unique
           - not_null
@@ -24,6 +25,7 @@ models:
                   - return_pending
                   - returned
       - name: customer_id
+        description: Primary key for the customers table
         data_tests:
           - relationships:
               arguments:
