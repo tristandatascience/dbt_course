@@ -5,7 +5,7 @@ sources:
     database: raw_dbt_course
     schema: jaffle_shop
     tables:
-      - name: customers 
+      - name: customers
       - name: orders
         config:
           freshness:
@@ -16,3 +16,8 @@ sources:
               count: 1
               period: day
           loaded_at_field: _etl_loaded_at
+  - name: stripe
+    database: raw_dbt_course
+    schema: stripe
+    tables:
+      - name: payment
